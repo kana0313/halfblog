@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Halfblog</title>
+
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/openclose.js"></script>
+<script src="js/fixmenu_pagetop.js"></script>
+
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!--[if lt IE 10]>
+<style>
+.slide1 {background: url(images/1.jpg) no-repeat center center;}
+.slide2,.slide3 {display: none;}
+.home #container,.home #main,.home #sub {overflow: auto;}
+</style>
+<![endif]-->
+</head>
+<body>
+<!--/#main-->
+
+<div id="sub">
+
+<h1 class="logo">
+<%= link_to "美容師国家試験筆記", root_path %>
+</h1>
+
+<!--PC用（801px以上端末）メニュー-->
+<nav id="menubar">
+<ul>
+<li class="menu1 current"><a href="index.html">Home<span>ホーム</span></a></li>
+<li class="menu2"><a href="about.html">About<span>当サイトについて</span></a></li>
+<li class="menu3"><%= link_to "ブログ", tweets_path %></li>
+<li class="menu4"><a href="access.html">SNS<span>#follow me💕</span></a></li>
+<li class="menu5"><a href="contact.html">お問い合わせ<span>お仕事依頼はこちらからお願いします。</span></a></li>
+</ul>
+</nav>
+
+</div>
+<!--/#sub-->
+
+<!--小さな端末用（800px以下端末）環境でのみ表示させるブロック-->
+
+<div id="sh-sub">
+
+<h1 class="logo">
+<%= link_to "美容師国家試験筆記", tweets_path %>
+</h1>
+
+<!--小さな端末用（800px以下端末）メニュー-->
+<nav id="menubar-s">
+<ul>
+<li class="menu1 current"><a href="index.html">Home<span>ホーム</span></a></li>
+<li class="menu2"><a href="about.html">About<span>当サイトについて</span></a></li>
+<li class="menu3"><%= link_to "ブログ", root_path %></li>
+<li class="menu4"><a href="access.html">SNS<span>#follow me💕</span></a></li>
+<li class="menu5"><a href="contact.html">お問い合わせ<span>お仕事依頼はこちらからお願いします。</span></a></li>
+</ul>
+</nav>
+
+</div>
+<!--/#sh-sub-->
+
+
+
+<%= yield %>
+</body>
+</html>

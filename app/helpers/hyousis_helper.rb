@@ -1,0 +1,2 @@
+module HyousisHelper
+end

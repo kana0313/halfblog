@@ -1,0 +1,15 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*contentsボックス
+---------------------------------------------------------------------------*/
+/*ボックス１個あたりの設定*/
+.contents {
+	position: relative;
+	width: 24%;		/*幅*/
+	margin: 0.5%;	/*外側に空けるスペース*/
+	float: left;	/*左に回り込み*/
+	background:greenyellow;	/*背景色*/
+}
