@@ -67,3 +67,7 @@ gem 'sprockets', '3.7.2'
 
 gem 'kaminari' 
 gem 'devise'
+
+# 画像投稿
+gem 'carrierwave'
+gem 'mini_magick'

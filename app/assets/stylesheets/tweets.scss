@@ -6,10 +6,31 @@
 /*contentsボックス
 ---------------------------------------------------------------------------*/
 /*ボックス１個あたりの設定*/
-.contents {
+.header__bar{
+	position:relative;
+}
+
+.toukou{
+	width: 80%;
+}
+
+.contents{
+
+top: 30%;
+right: 50%;
+background: -moz-linear-gradient(65deg, #F13F79, #FFC778); 
+background: -webkit-linear-gradient(65deg, #F13F79, #FFC778); 
+background: linear-gradient(25deg, #F13F79, #FFC778); 
+
+}
+
+.sikaku{
 	position: relative;
-	width: 24%;		/*幅*/
-	margin: 0.5%;	/*外側に空けるスペース*/
-	float: left;	/*左に回り込み*/
-	background:greenyellow;	/*背景色*/
+	
+}
+.sikakus{
+	position: absolute;
+	right: 100px;
+	height: 500px;
+	width: 500px;
 }

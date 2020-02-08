@@ -11,7 +11,6 @@
 
 <header class="header">
     <div class="header__bar row">
-      <h1 class="grid-6"><a href="/">PicTweet</a></h1>
       <% if user_signed_in? %>
         <div class="user_nav grid-6">
           <span><%= current_user.nickname %>
@@ -31,24 +30,19 @@
         </div>
       <% end %>
     </div>
-  </header>
-
-<section>
-
-  <h2>kanaブログ</h2>
+  <section>
+    <h2>kanaブログ</h2>
+  </section>
+</header>
+  
+<div class="contents row">
+  <% @tweets.each do |tweet| %>
+   <%= render partial: "tweet", locals: { tweet: tweet } %>
+  <% end %>
+  <%= paginate(@tweets) %>
+</div>
   
 
-  <div class="contents row" >
-    <% @tweets.each do |tweet| %>
-      <div class="content_post" style="background-image: url(<%= tweet.image %>);">
-        <%= simple_format(tweet.text) %>
-        <span class="name"><%= tweet.name %></span>
-      </div>
-    <% end %>
-     <%= paginate(@tweets) %>
-  </div>
-
-</section>
 
 
 </div>
