@@ -41,10 +41,10 @@
 <!--PC用（801px以上端末）メニュー-->
 <nav id="menubar">
 <ul>
-<li class="menu1 current"><a href="index.html">Home<span>ホーム</span></a></li>
+<li class="menu1 current"><%= link_to "Home", root_path %></li>
 <li class="menu2"><a href="about.html">About<span>当サイトについて</span></a></li>
 <li class="menu3"><%= link_to "ブログ", tweets_path %></li>
-<li class="menu4"><a href="access.html">SNS<span>#follow me💕</span></a></li>
+<li class="menu4"><%= link_to "SNS", hyousis_sns_path %>#follow me💕</li>
 <li class="menu5"><a href="contact.html">お問い合わせ<span>お仕事依頼はこちらからお願いします。</span></a></li>
 </ul>
 </nav>

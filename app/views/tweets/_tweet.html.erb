@@ -1,6 +1,17 @@
-  <div class="content_post" >
-   <%= image_tag tweet.image.to_s%>
-  
+<div class="content_post" >
+  <div class="content_box" >
+    <div class="content_image" >
+     <%= image_tag tweet.image.to_s%>
+    </div>
+    <div class="content_text" >
+     <%= simple_format(tweet.text) %>
+    </div>
+  </div>
+      <span class="name">
+        <a href="/users/<%= tweet.user_id %>">
+          <span>投稿者</span><%= tweet.user.nickname %>
+        </a>
+      </span>
     
       <% if user_signed_in? && tweet.user_id == current_user.id %>
         <div class="more">
@@ -14,10 +25,6 @@
           </ul>
         </div>
       <% end %>
-      <%= simple_format(tweet.text) %>
-      <span class="name">
-        <a href="/users/<%= tweet.user_id %>">
-          <span>投稿者</span><%= tweet.user.nickname %>
-        </a>
-      </span>
+     
+      
     </div>

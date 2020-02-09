@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root  'hyousis#index' 
+  get 'hyousis/sns' => 'hyousis#sns'
+
   get 'tweets' => 'tweets#index'
   get  'tweets/new'  =>  'tweets#new'   
   post  'tweets'      =>  'tweets#create'    #ツイート投稿機能

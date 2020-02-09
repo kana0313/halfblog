@@ -6,6 +6,16 @@
 /*contentsボックス
 ---------------------------------------------------------------------------*/
 /*ボックス１個あたりの設定*/
+/*Shoppingページの背景画像*/
+#main_blog {
+  background-image: url("img_access.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: right bottom;
+	background-size: 50%;
+}
+
+
 .header__bar{
 	position:relative;
 }
@@ -14,15 +24,15 @@
 	width: 80%;
 }
 
-.contents{
+// .contents{
+// width: 500px;
+// top: 30%;
+// right: 50%;
+// background: -moz-linear-gradient(65deg, #F13F79, #FFC778); 
+// background: -webkit-linear-gradient(65deg, #F13F79, #FFC778); 
+// background: linear-gradient(25deg, #F13F79, #FFC778); 
 
-top: 30%;
-right: 50%;
-background: -moz-linear-gradient(65deg, #F13F79, #FFC778); 
-background: -webkit-linear-gradient(65deg, #F13F79, #FFC778); 
-background: linear-gradient(25deg, #F13F79, #FFC778); 
-
-}
+// }
 
 .sikaku{
 	position: relative;
@@ -33,4 +43,17 @@ background: linear-gradient(25deg, #F13F79, #FFC778);
 	right: 100px;
 	height: 500px;
 	width: 500px;
+}
+
+.content_post{
+width: 1000px;
+}
+
+.content_box{
+	display: flex;
+	width: 50%;
+}
+
+.content_image{
+ width: 50%;
 }
